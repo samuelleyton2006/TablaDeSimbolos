@@ -1,0 +1,36 @@
+== Gramática ==
+
+Programa   -> Bloque EOF
+
+Bloque     -> Sentencia (SEP Sentencia)*
+
+Sentencia  -> Asignacion
+            | Impresion
+
+Asignacion -> ID ASIG Expresion
+
+Impresion  -> IMPR '(' Expresion ')'
+
+Expresion  -> Termino ((SUMA | RESTA) Termino)*
+
+Termino    -> Factor ((MULT | DIV) Factor)*
+
+Factor     -> NUM
+            | ID
+            | '(' Expresion ')'
+
+
+== AST ==
+Programa
+  Asignar(name=x)
+    Numero(1.0)
+  Asignar(name=y)
+    Numero(2.0)
+  Asignar(name=z)
+    BinOp(op=SUMA)
+      Variable(x)
+      BinOp(op=MULT)
+        Variable(y)
+        Numero(5.0)
+  Imprimir
+    Variable(z)

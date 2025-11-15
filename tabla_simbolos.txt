@@ -1,0 +1,4 @@
+== Tabla de símbolos ==
+x          tipo=num ocurrencias=2
+y          tipo=num ocurrencias=2
+z          tipo=num ocurrencias=2

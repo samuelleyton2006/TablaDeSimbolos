@@ -1,0 +1,10 @@
+== Código en tres direcciones ==
+t1 = 1.0
+x = t1
+t2 = 2.0
+y = t2
+t3 = 5.0
+t4 = y * t3
+t5 = x + t4
+z = t5
+impr z
